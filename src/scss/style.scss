@@ -11,22 +11,20 @@
 // $Base
 // ==========================================================================
 @import 'base/index';
-// ==========================================================================
-// the header
-// ==========================================================================
-@import "modules/header";
-@import "modules/link-intro";
-//==========================================================
-
+//// ==========================================================================
+//// the header
+//// ==========================================================================
+//@import "modules/header";
+//@import "modules/link-intro";
+////==========================================================
 //all page page
 //===========================================================
-@import "pages/homes/index";
-@import "pages/detail/index";
-
+//@import "pages/homes/index";
+//@import "pages/detail/index";
 //============================================================
 // the footer of page
 //============================================================
-@import "modules/footer";
+//@import "modules/footer";
 // ==========================================================
 //animation
 //===========================================================
@@ -34,3 +32,198 @@
 
 //////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////
+//.row{
+//  margin:0;
+//}
+body {
+  background-color: #4D5573;
+  height: 100%;
+  width: 100%;
+  //overflow: hidden;
+  font-family: "Roboto Slab";
+}
+
+.sidebar {
+  color: white;
+  height: 100%;
+
+  &-logo {
+    background-color: #394263;
+    padding: 0 0 20px 20px;
+    h6 strong {
+      font-weight: 400;
+      font-size: 25px;
+    }
+  }
+  &-nav {
+    padding: 20px 0 20px 20px;
+
+    font-weight: 400;
+    font-size: 14px;
+    &__item {
+      li {
+        padding-bottom: 13px;
+        &:hover {
+          border-left: solid 4px #4f95ff;
+          color: white;
+          font-style: italic;
+          background-color: #394263;
+        }
+        &:hover i{
+          display: none;
+        }
+        a{
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+      &__header {
+        font-weight: 700;
+        font-size: 14px;
+        padding-bottom: 13px;
+        opacity: 0.8;
+      }
+      //
+      a {
+        i {
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+
+//page content :common
+.page_content {
+  background-color: #eaedf1;
+  height: 100%;
+
+}
+
+//job ....
+.job {
+  &__item {
+    overflow: hidden;
+    //border-radius: 40px !important;
+    &__header {
+      padding: 8px 0;
+      color: white;
+      font-weight: 400;
+      font-size: 14px;
+      span {
+        margin-left: 5px;
+        font-size: 12px;
+        font-weight: 300;
+
+      }
+    }
+    &__content {
+      background-color: white;
+      padding: 13px 0;
+      font-size: 25px;
+    }
+    &:nth-child(1) {
+      .job__item__header {
+        background-color: #28a745;
+      }
+      .job__item__content {
+        color: #28a745;
+      }
+    }
+    &:nth-child(2) {
+      .job__item__header {
+        background-color: #cc9b40;
+      }
+      .job__item__content {
+        color: #e34b28;
+      }
+    }
+    &:nth-child(3) {
+      .job__item__header {
+        background-color: #e34b28;
+      }
+    }
+    &:nth-child(4) {
+      .job__item__header {
+        background-color: #482ba7;
+      }
+    }
+  }
+}
+
+.information-job {
+  margin: 20px 0;
+  background-color: white;
+  padding: 20px 15px;
+  &__header {
+    @include underline;
+    width: 100%;
+    text-align: left;
+    color: #1e145a;
+    font-weight: 700;
+    i {
+      padding-right: 10px;
+    }
+  }
+
+  .filter {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    .input-group-text {
+      background-color: transparent;
+
+    }
+    .form-control{
+      font-weight: 700;
+      font-size: 14px;
+
+    }
+  }
+
+  table {
+    //th{
+    //  width: 100%;
+    //}
+    thead {
+
+    }
+    tbody {
+      font-size: 14px;
+      font-weight: 400;
+
+      .label, span {
+        display: inline-block;
+      }
+    }
+  }
+
+}
+
+.nav{
+  background-color: white;
+  border: none;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  i.fa-bars{
+    font-size: 15px;
+    padding:0 15px;
+  }
+  input{
+    border: none;
+    width: 60%;
+    &::placeholder{
+      padding-left:5%;
+    }
+  }
+  .personal{
+    padding: 0;
+    .navbar-nav{
+      flex-direction: row;
+    }
+    &__item{
+      padding: 0 10px;
+
+    }
+  }
+}
