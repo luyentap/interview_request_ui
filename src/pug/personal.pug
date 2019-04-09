@@ -9,7 +9,7 @@ html(lang='en')
         link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T', crossorigin='anonymous')
         link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.8.1/css/all.css', integrity='sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf', crossorigin='anonymous')
         link(href='../css/style.css' rel='stylesheet' type='text/css')
-        link(href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' )
+        link(href='https://fonts.googleapis.com/css?family=Open+Sans|Merriweather|Roboto+Slab' rel='stylesheet' )
         script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
         script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous')
         script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous')
@@ -107,11 +107,11 @@ html(lang='en')
 
                     .row
                         .col-4
-                            .candidate.col-12.bg-white
+                            .candidate.col-12.bg-white.border.rounded-lg
                                 .candidate__header.text-left.py-3.border-bottom
-                                    i.fa.fa-user
-                                    | Candidate Information
-                                .candidate__content.border.rounded.pt-2.mt-4.mb-3
+                                    i.fa.fa-user.mr-2
+                                    span Candidate Information
+                                .candidate__content.border.rounded-lg.pt-2.mt-4.mb-3
                                     .container-fluid
                                         img.candidate__content__item.candidate__content__img(src="https://banner2.kisspng.com/20180420/diq/kisspng-computer-icons-avatar-user-profile-blog-personal-vector-5ad9f3ac379de4.5238840715242331322278.jpg")
                                         p.candidate__content__item.candidate__content__name Nguyễn Thị Ánh
@@ -143,9 +143,9 @@ html(lang='en')
 
                             .job.col-12.bg-white.pb-3
                                 .job__header.text-left.mt-3.py-3.border-bottom
-                                    i.fa.fa-suitcase
-                                    | Job Applied
-                                .job__content.border.rounded.pt-2.mt-4
+                                    i.fa.fa-suitcase.mr-2
+                                    span Job Applied
+                                .job__content.border.rounded-lg.pt-2.mt-4
                                     .container-fluid
                                         .job__content__item.row
                                             p.col-8 Dynamic Administration Director
@@ -162,11 +162,11 @@ html(lang='en')
 
 
                         .reviews.col-8
-                            .step.col-12.bg-white.pb-3
+                            .step.col-12.bg-white.border.rounded-lg
                                 .step__header.text-left.py-3.border-bottom
                                     i.fa.fa-bars.mr-2
                                     span Steps
-                                .step__content.border.rounded.pt-2.mt-4.mb-3
+                                .step__content.border.rounded-lg.pt-2.mt-4.mb-3
                                     .container-fluid
                                         //.progress
                                         //    .progress-bar(role='progressbar' style='width: 15%' aria-valuenow='15' aria-valuemin='0' aria-valuemax='100')
@@ -189,23 +189,23 @@ html(lang='en')
                                             .four.bg-primary
                                         .row.step__name.mt-2
                                             .col
-                                                |Review
+                                                |REVIEW
                                             .col
-                                                |Review
+                                                |TEST
                                             .col
-                                                |Review
+                                                |INTERVIEW
                                             .col
-                                                |Review
+                                                |OFFER
                                         .step__button.text-right.my-3
-                                            button.btn.btn-danger
+                                            button.btn.btn-danger.mr-1
                                                 i.fa.fa-blind
                                                 |Block
-                                            button.btn.btn-info Previous
+                                            button.btn.btn-info.mr-1 Previous
                                             button.btn.btn-info Next
 
-                            .reivew.col-12.bg-white.pb-3.my-3
+                            .reivew.col-12.bg-white.my-3.border.rounded-lg
                                 .review__header.text-left.py-3.border-bottom
-                                    .row
+                                    .row.align-items-center
                                         .col.text-left
                                             i.fa.fa-pencil-alt.mr-2
                                             b Change
@@ -217,48 +217,46 @@ html(lang='en')
                                             button.btn.rounded-pill
                                                 i.fa.fa-sync-alt
                                                 | Fresh
-                                .review__content.border.rounded.pt-2.mt-4.mb-3
+                                .review__content.border.rounded-lg.pt-2.mt-4.mb-3
                                     .container-fluid
-                                        .row
-                                            .container
-                                                .btn-group.text-center
-                                                    .custom-control.form-control-lg.custom-checkbox
-                                                        input#customCheck1.custom-control-input(type='checkbox')
-                                                        label.custom-control-label(for='customCheck1') Review
-                                                    .custom-control.form-control-lg.custom-checkbox
-                                                        input#customCheck2.custom-control-input(type='checkbox')
-                                                        label.custom-control-label(for='customCheck2') Review
-                                                    .custom-control.form-control-lg.custom-checkbox
-                                                        input#customCheck3.custom-control-input(type='checkbox')
-                                                        label.custom-control-label(for='customCheck3') Review
-                                                    .custom-control.form-control-lg.custom-checkbox
-                                                        input#customCheck4.custom-control-input(type='checkbox')
-                                                        label.custom-control-label(for='customCheck4') Review
+                                        .btn-group.text-center.row
+                                            .col.custom-control.form-control-lg.custom-checkbox
+                                                input#customCheck1.custom-control-input(type='checkbox')
+                                                label.custom-control-label(for='customCheck1') Pending
+                                            .col.custom-control.form-control-lg.custom-checkbox
+                                                input#customCheck2.custom-control-input(type='checkbox')
+                                                label.custom-control-label(for='customCheck2') Interview_scheduled
+                                            .col.custom-control.form-control-lg.custom-checkbox
+                                                input#customCheck3.custom-control-input(type='checkbox')
+                                                label.custom-control-label(for='customCheck3') Interview_passed
+                                            .col.custom-control.form-control-lg.custom-checkbox
+                                                input#customCheck4.custom-control-input(type='checkbox')
+                                                label.custom-control-label(for='customCheck4') Interview_not_selected
 
-                                                    //input.checkbox(type="checkbox" aria-label="Checkbox for following text input")
-                                                    //input.checkbox(type="checkbox" aria-label="Checkbox for following text input")
+                                            //input.checkbox(type="checkbox" aria-label="Checkbox for following text input")
+                                            //input.checkbox(type="checkbox" aria-label="Checkbox for following text input")
 
-                                                    //    input(type='checkbox')
-                                                    //    span.glyphicon.glyphicon-ok
-                                                    //label.btn.btn-primary
-                                                    //    input(type='checkbox', autocomplete='off')
-                                                    //    span.glyphicon.glyphicon-ok
-                                                    //label.btn.btn-info
-                                                    //    input(type='checkbox', autocomplete='off')
-                                                    //    span.glyphicon.glyphicon-ok
-                                                    //label.btn.btn-default
-                                                    //    input(type='checkbox', autocomplete='off')
-                                                    //    span.glyphicon.glyphicon-ok
-                                                    //label.btn.btn-warning
-                                                    //    input(type='checkbox', autocomplete='off')
-                                                    //    span.glyphicon.glyphicon-ok
-                                                    //label.btn.btn-danger
-                                                    //    input(type='checkbox', autocomplete='off')
-                                                    //    span.glyphicon.glyphicon-ok
+                                            //    input(type='checkbox')
+                                            //    span.glyphicon.glyphicon-ok
+                                            //label.btn.btn-primary
+                                            //    input(type='checkbox', autocomplete='off')
+                                            //    span.glyphicon.glyphicon-ok
+                                            //label.btn.btn-info
+                                            //    input(type='checkbox', autocomplete='off')
+                                            //    span.glyphicon.glyphicon-ok
+                                            //label.btn.btn-default
+                                            //    input(type='checkbox', autocomplete='off')
+                                            //    span.glyphicon.glyphicon-ok
+                                            //label.btn.btn-warning
+                                            //    input(type='checkbox', autocomplete='off')
+                                            //    span.glyphicon.glyphicon-ok
+                                            //label.btn.btn-danger
+                                            //    input(type='checkbox', autocomplete='off')
+                                            //    span.glyphicon.glyphicon-ok
 
-                            .mail.col-12.bg-white.pb-3.mb-3
+                            .mail.col-12.bg-white.mb-3.border.rounded-lg
                                 .mail__header.text-left.py-3.border-bottom
-                                    .row
+                                    .row.align-items-center
                                         .text-left.col
                                             i.fa.fa-bars.mr-2
                                             b Mail
@@ -268,7 +266,7 @@ html(lang='en')
                                             button.btn.rounded-pill.mr-1
                                                 i.fa.fa-pencil-alt.pr-2
                                                 span Compose message
-                                .mail__content.border.rounded.pt-2.mt-4.mb-3
+                                .mail__content.border.rounded-lg.pt-2.mt-4.mb-3
                                     .container-fluid
                                         .row
                                             .col
@@ -276,11 +274,11 @@ html(lang='en')
                                                     | x No data
 
 
-                            .note.col-12.bg-white.pb-3.text-left
+                            .note.col-12.bg-white.pb-3.text-left.border.rounded-lg
                                 .note__header.py-3.border-bottom
                                     i.fa.fa-sticky-note.mr-2
                                     span Notes
-                                .note__content.border.rounded.pt-2.mt-4.mb-3
+                                .note__content.border.rounded-lg.pt-2.mt-4
                                     .container-fluid
                                         .row
                                             .col-2.p-0
