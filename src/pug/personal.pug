@@ -92,16 +92,16 @@ html(lang='en')
                         input.input-form(placeholder="Search")
                         .personal.ml-auto.navbar
                             .personal__item
-                                i.fa.fa-bell
-                                sup.badge.badge-warning 0
+                                i.fa.fa-signal
+                                sup.badge.badge-danger 0
                             .personal__item
                                 i.fa.fa-bell
                                 sup.badge.badge-primary 1
                             .personal__item.nav-item
                                 .dropdown
-                                    a.nav-link.dropdown-toggle(data-toggle="dropdown" id="navbarDropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false")
+                                    a.text-dark.nav-link.dropdown-toggle.bg-light(data-toggle="dropdown" id="navbarDropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false")
                                         i.fa.fa-user-circle
-                                    .dropdown-menu(aria-labelledby="navbarDropdown")
+                                    .dropdown-menu.dropdown-menu-right(aria-labelledby="navbarDropdown")
                                         .dropdown-item info
                                         .dropdown-item info
 
@@ -179,14 +179,14 @@ html(lang='en')
                                         //    .three.bg-primary
                                         //    .progress-bar(style='width: 70%;')
                                         .progress.my-3
-                                            .progress-bar(role='progressbar' style='width: 25' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100')
-                                            .one.bg-primary
+                                            .progress-bar.bg-success(role='progressbar' style='width: 25%' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100')
+                                            .one.bg-success
                                             .progress-bar.bg-success(role='progressbar' style='width:25%' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100')
-                                            .two.bg-warning
-                                            .progress-bar.bg-info(role='progressbar' style='width: 25%' aria-valuenow='25' aria-valuem  in='0' aria-valuemax='100')
-                                            .three.bg-primary
-                                            .progress-bar.bg-success(role='progressbar' style='width:25%' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100')
-                                            .four.bg-primary
+                                            .two.bg-success
+                                            .progress-bar.bg-warning(role='progressbar' style='width: 25%' aria-valuenow='25' aria-valuem  in='0' aria-valuemax='100')
+                                            .three.bg-warning
+                                            .progress-bar.bg-secondary(role='progressbar' style='width:25%' aria-valuenow='25' aria-valuemin='0' aria-valuemax='100')
+                                            .four.bg-secondary
                                         .row.step__name.mt-2
                                             .col
                                                 |REVIEW
