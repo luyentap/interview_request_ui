@@ -46,10 +46,13 @@ body {
 .sidebar {
   color: white;
   height: 100%;
-
+  padding: 0;
   &-logo {
-    background-color: #394263;
+    background-color: #323953;
     padding: 0 0 20px 20px;
+    width: 100%;
+    padding: 4px 0;
+    margin: 0;
     h6 strong {
       font-weight: 400;
       font-size: 25px;
@@ -233,11 +236,12 @@ body {
 .candidate {
   //font-family: "Open Sans";
   width: 100%;
+  font-size: 13px;
   overflow: hidden;
   //background-color: white;
   color: #1e145a;
   &__header{
-    @include font(14px,700, null,null){
+    @include font(15px,700, null,null){
       white-space:nowrap;
     };
 
@@ -249,7 +253,7 @@ body {
       padding: 10px 0;
       margin: 0 2%;
       p:nth-child(1){
-        @include font(15px,700);
+        @include font(14px,700);
         text-align: right;
       }
       p:nth-child(2){
@@ -267,7 +271,7 @@ body {
       overflow: hidden;
     }
     &__name{
-      @include font(34px,700,null,null){
+      @include font(25px,700,null,null){
         white-space:nowrap;
       };
     }
@@ -286,13 +290,16 @@ body {
       }
     }
     &__job{
+      p:nth-child(1){
+        font-size: 13px;
+      }
       p:nth-child(2){
-        @include font(16px,bold );
+        @include font(13px,bold );
       }
     }
     &__cv,&__history{
       p:nth-child(2) {
-        @include font(16px, bold, #3ad5ff);
+        @include font(13px, bold, #3ad5ff);
       }
     }
   }
@@ -301,10 +308,10 @@ body {
 .job{
   //background-color: white;
   &__header{
-
+    font-size: 15px;
   }
   &__content{
-    font-size: 14px;
+    font-size: 13px;
     &__item{
       p:first-child{
         text-align: right;
@@ -358,7 +365,7 @@ body {
     left: 85%;
   }
   &__header{
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
   }
   &__name{
@@ -375,7 +382,7 @@ body {
 //status== reivew
 .review{
   &__header{
-
+    font-size: 15px;
     .text-right button{
       border: solid 1px #a3a3a3;
     }
@@ -410,12 +417,15 @@ body {
 .mail{
   &__header{
     .text-right button{
+      font-size: 15px;
       border: solid 1px #a3a3a3;
     }
   }
 }
 .note{
-
+  &__header{
+    font-size: 15px;
+  }
   &__content{
     img{
       width: 100%;
