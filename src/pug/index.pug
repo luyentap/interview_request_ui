@@ -106,7 +106,7 @@ html(lang='en')
                                         .dropdown-item info
 
                     .job.row
-                        .col-lg-3.col-md-6.job__item
+                        .col-lg-3.col-md-6.job__item(data-toggle="modal" data-target="#create")
                             p.job__item__header
                                 |Add New
                                 span Job
@@ -198,10 +198,10 @@ html(lang='en')
                                             td.text-primary Expered on 2/2/2020
                                             td
                                                 .btn-group.btn-group-xs
-                                                    button.btn.btn-default.px-0
+                                                    button(data-toggle="modal" data-target="#edit").btn.btn-default.px-0
                                                         .fa.fa-eye.text-warning
                                                 .btn-group.btn-group-xs
-                                                    button.btn.btn-default.px-0
+                                                    button(data-toggle="modal" data-target="#delete").btn.btn-default.px-0
                                                         .fa.fa-trash.text-danger
 
                                     +tr
@@ -225,3 +225,67 @@ html(lang='en')
                                         a.page-link(href='#') 3
                                     li.page-item
                                         a.page-link(href='#') Next
+
+        #delete.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+            .modal-dialog(role='document')
+                .modal-content
+                    .modal-header
+                        h5#exampleModalLabel.modal-title Delete the candidate
+                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                            span(aria-hidden='true') ×
+                    .modal-body
+                        | Are you want to delete it
+                    .modal-footer
+                        button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+                        button.btn.btn-danger(type='button') Delete
+
+        #edit.modal.fade(tabindex='-1', role='dialog', aria-labelledby='deleteLabel', aria-hidden='true')
+            .modal-dialog(role='document')
+                .modal-content
+                    .modal-header
+                        h5#deleteLabel.modal-title Edit the candidate
+                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                            span(aria-hidden='true') ×
+                    .modal-body
+                        form.form
+                            .form-group.row
+                                label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Name
+                                .col-sm-10
+                                    input#colFormLabelSm.form-control.form-control-sm(type='text', placeholder='enter name')
+                            .form-group.row
+                                label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Salary
+                                .col-sm-10
+                                    input#colFormLabelSm2.form-control.form-control-sm(type='text', placeholder='enter salary')
+                            .form-group.row
+                                label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Position
+                                .col-sm-10
+                                    input#colFormLabelSm3.form-control.form-control-sm(type='text', placeholder='entrer position')
+
+                    .modal-footer
+                        button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+                        button.btn.btn-success(type='button') Save
+        #create.modal.fade(tabindex='-1', role='dialog', aria-labelledby='deleteLabel', aria-hidden='true')
+            .modal-dialog(role='document')
+                .modal-content
+                    .modal-header
+                        h5#createLabel.modal-title Create a job
+                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                            span(aria-hidden='true') ×
+                    .modal-body
+                        form.form
+                            .form-group.row
+                                label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Name
+                                .col-sm-10
+                                    input.form-control.form-control-sm(type='text', placeholder='enter name')
+                            .form-group.row
+                                label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Salary
+                                .col-sm-10
+                                    input.form-control.form-control-sm(type='text', placeholder='enter salary')
+                            .form-group.row
+                                label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Position
+                                .col-sm-10
+                                    input.form-control.form-control-sm(type='text', placeholder='entrer position')
+
+                    .modal-footer
+                        button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+                        button.btn.btn-success(type='button') Save
