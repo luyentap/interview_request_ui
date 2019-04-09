@@ -361,6 +361,8 @@ body {
     .information-job .filter .form-control {
       font-weight: 700;
       font-size: 14px; }
+    .information-job .filter button {
+      width: 100%; }
   .information-job table tbody {
     font-size: 14px;
     font-weight: 400; }
