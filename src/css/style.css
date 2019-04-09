@@ -448,14 +448,14 @@ body {
       font-weight: bold;
       color: #3ad5ff; }
 
-.job__header {
+.job-aplied__header {
   font-size: 15px; }
 
-.job__content {
+.job-aplied__content {
   font-size: 13px; }
-  .job__content__item p:first-child {
+  .job-aplied__content__item p:first-child {
     text-align: right; }
-  .job__content__item p:nth-child(2) {
+  .job-aplied__content__item p:nth-child(2) {
     text-align: left;
     border-left: solid 4px #ffb421;
     text-transform: uppercase;
