@@ -419,8 +419,10 @@ body {
 
 .mail{
   &__header{
-    .text-right button{
+    .text-left{
       font-size: 15px;
+    }
+    .text-right button{
       border: solid 1px #a3a3a3;
     }
   }

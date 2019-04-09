@@ -521,8 +521,10 @@ body {
     -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(255, 0, 247, 0.25);
     box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(255, 0, 247, 0.25); }
 
+.mail__header .text-left {
+  font-size: 15px; }
+
 .mail__header .text-right button {
-  font-size: 15px;
   border: solid 1px #a3a3a3; }
 
 .note__header {
