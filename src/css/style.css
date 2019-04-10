@@ -1,4 +1,8 @@
 @import url(font-awesome.min.css);
+@font-face {
+  font-family: 'Merriweather';
+  src: url(../font/Merriweather/Merriweather-Regular.ttf); }
+
 /*
 retrieve color from $colors map ie. `color(primary, base)`
  --  example in use: color: color(primary, green);
