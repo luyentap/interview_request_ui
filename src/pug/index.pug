@@ -1,291 +1,190 @@
-doctype html
-html(lang='en')
-    head
-        meta(charset='UTF-8')
-        meta(name='viewport', content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
-        meta(http-equiv='X-UA-Compatible', content='ie=edge')
-        title Document
-        meta(http-equiv='X-UA-Compatible', content='ie=edge')
-        link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T', crossorigin='anonymous')
-        link(rel='stylesheet', href='https://use.fontawesome.com/releases/v5.8.1/css/all.css', integrity='sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf', crossorigin='anonymous')
-        link(href='../css/style.css' rel='stylesheet' type='text/css')
-        link(href='https://fonts.googleapis.com/css?family=Open+Sans|Merriweather|Roboto+Slab' rel='stylesheet' )
-        script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous')
-        script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous')
-        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous')
-
-    body
-        .container-fluid
-            .row
-                .col-lg-2.sidebar
-                    .sidebar-logo
-                        img(src="../img/logo.png")
-                        span.push-top-bottom
-                            strong RMS
-                    // Sidebar Navigation
-                    ul.sidebar-nav
-                        li.sidebar-nav__item
-                            ul
-                                li
-                                    a
-                                        i.fas.fa-home
-                                        span Home
-
-                                li
-                                    a
-                                        i.fas.fa-tachometer-alt
-                                        span DashBoard
-                        li.sidebar-nav__item
-                            h6.sidebar-nav__item__header MANAGE RECRUMENT
-                            ul
-                                li
-                                    a
-                                        i.fa.fa-suitcase
-                                        span Job
-
-                                li
-                                    a
-                                        i.fa.fa-users
-                                        span User
-
-                                li
-                                    a
-                                        i.fa.fa-file
-                                        span Apply
-                                li
-                                    a
-                                        i.fa.fa-calendar-alt
-                                        span Calendar
-                                li
-                                    a
-                                        i.fa.fa-envelope
-                                        span Email
-                        li.sidebar-nav__item
-                            h6.sidebar-nav__item__header MANAGE RECRUMENT
-                            ul
-                                li
-                                    a
-                                        i.fa.fa-suitcase
-                                        span Job
-
-                                li
-                                    a
-                                        i.fa.fa-users
-                                        span User
-
-                                li
-                                    a
-                                        i.fa.fa-file
-                                        span Apply
-                                li
-                                    a
-                                        i.fa.fa-calendar-alt
-                                        span Calendar
-                                li
-                                    a
-                                        i.fa.fa-envelope
-                                        span Email
-                    // END Sidebar Navigation
-                .col-lg-10.page_content.text-center
-                    .nav.navbar.nav-default.row
-                        i.fa.fa-bars
-                        input.input-form(placeholder="Search")
-                        .personal.ml-auto.navbar
-                            .personal__item
-                                i.fa.fa-signal
-                                sup.badge.badge-danger 0
-                            .personal__item
-                                i.fa.fa-bell
-                                sup.badge.badge-primary 1
-                            .personal__item.nav-item
-                                .dropdown
-                                    a.text-dark.nav-link.dropdown-toggle.bg-light(data-toggle="dropdown" id="navbarDropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false")
-                                        i.fa.fa-user-circle
-                                    .dropdown-menu.dropdown-menu-right(aria-labelledby="navbarDropdown")
-                                        .dropdown-item info
-                                        .dropdown-item info
-
-                    .job.row
-                        .col-lg-3.col-md-6.job__item(data-toggle="modal" data-target="#create")
-                            p.job__item__header
-                                |Add New
-                                span Job
-                            p.job__item__content
-                                i.fa.fa-plus
-                        .col-lg-3.col-md-6.job__item
-                            p.job__item__header
-                                | Urgent
-                                span Job
-                            p.job__item__content 1
-                        .col-lg-3.col-md-6.job__item
-                            p.job__item__header
-                                | Experied
-                                span Job
-                            p.job__item__content 1
-                        .col-lg-3.col-md-6.job__item
-                            p.job__item__header
-                                | All
-                                span Job
-                            p.job__item__content 1
-                    .row.information-job
-                        p.information-job__header
-                            i.fa.fa.fa-suitcase
-                            |Jobs
-                        .filter
-                            form.row
-                                .form-group.col.pr-1
-                                    .input-group
-                                        .input-group-prepend
-                                            .input-group-text
-                                                i.fa.fa-map-marker-alt
-                                        select.form-control
-                                            option All Branch
-                                            option Ha Noi
-                                            option Da Nang
-                                            option Ho Chi Minh
-                                .form-group.col.px-1
-                                    .input-group
-                                        .input-group-prepend
-                                            .input-group-text
-                                                i.fa.fa-calendar
-                                        input(placeholder="All Position Type").form-control
-                                .form-group.col.px-1
-                                    .input-group
-                                        .input-group-prepend
-                                            .input-group-text
-                                                i.fa.fa-bars
-                                        input(placeholder="All Categories").form-control
-                                .form-group.col.px-1
-                                    .input-group
-                                        .input-group-prepend
-                                            .input-group-text
-                                                i.fa.fa-clock
-                                        input(placeholder="Status").form-control
-                                .form-group.col.px-1
-                                    .input-group
-                                        .input-group-prepend
-                                            .input-group-text
-                                                i.fa.fa-search
-                                        input(placeholder="Enter Job titile,..").form-control
-                                .form-group.col.pl-1
-                                    button.btn.btn-primary
+include modules/header
+.container-fluid
+    .row
+        include modules/navbar
+        .col-lg-10.page_content.text-center
+            include modules/header_content
+            .job.row
+                .col-lg-3.col-md-6.job__item(data-toggle="modal" data-target="#create")
+                    p.job__item__header
+                        |Add New
+                        span Job
+                    p.job__item__content
+                        i.fa.fa-plus
+                .col-lg-3.col-md-6.job__item
+                    p.job__item__header
+                        | Urgent
+                        span Job
+                    p.job__item__content 1
+                .col-lg-3.col-md-6.job__item
+                    p.job__item__header
+                        | Experied
+                        span Job
+                    p.job__item__content 1
+                .col-lg-3.col-md-6.job__item
+                    p.job__item__header
+                        | All
+                        span Job
+                    p.job__item__content 1
+            .row.information-job
+                p.information-job__header
+                    i.fa.fa.fa-suitcase
+                    |Jobs
+                .filter
+                    form.row
+                        .form-group.col.pr-1
+                            .input-group
+                                .input-group-prepend
+                                    .input-group-text
+                                        i.fa.fa-map-marker-alt
+                                select.form-control
+                                    option All Branch
+                                    option Ha Noi
+                                    option Da Nang
+                                    option Ho Chi Minh
+                        .form-group.col.px-1
+                            .input-group
+                                .input-group-prepend
+                                    .input-group-text
+                                        i.fa.fa-calendar
+                                input(placeholder="All Position Type").form-control
+                        .form-group.col.px-1
+                            .input-group
+                                .input-group-prepend
+                                    .input-group-text
+                                        i.fa.fa-bars
+                                input(placeholder="All Categories").form-control
+                        .form-group.col.px-1
+                            .input-group
+                                .input-group-prepend
+                                    .input-group-text
+                                        i.fa.fa-clock
+                                input(placeholder="Status").form-control
+                        .form-group.col.px-1
+                            .input-group
+                                .input-group-prepend
+                                    .input-group-text
                                         i.fa.fa-search
-                                        | Search
-                        .table-responsive
-                            table.table.table-bordered.table-hover.table-striped.table-vcenter.text-center
-                                thead
-                                    tr
-                                        th(scope="row" ) .No
-                                        th(scope="row" ) Name
-                                        th(scope="row" ) Salary
-                                        th(scope="row" ) Position
-                                        th(scope="row" ) Target
-                                        th(scope="row" ) Quality
-                                        th(scope="row" ) Status
-                                        th(scope="row" ) Action
+                                input(placeholder="Enter Job titile,..").form-control
+                        .form-group.col.pl-1
+                            button.btn.btn-primary
+                                i.fa.fa-search
+                                | Search
+                .table-responsive
+                    table.table.table-bordered.table-hover.table-striped.table-vcenter.text-center
+                        thead
+                            tr
+                                th(scope="row" ) .No
+                                th(scope="row" ) Name
+                                th(scope="row" ) Salary
+                                th(scope="row" ) Position
+                                th(scope="row" ) Target
+                                th(scope="row" ) Quality
+                                th(scope="row" ) Status
+                                th(scope="row" ) Action
 
-                                tbody
-                                    mixin tr
-                                        tr
-                                            td 1
-                                            td.visible-lg Java Develop Sun*
-                                                sup.badge.badge-primary.badge-pill 0
-                                            td Up to 7000$
-                                            td Developer
-                                            td
-                                                span.badge.badge-warning 0 / 2
-                                            td 0
-                                            td.text-primary Expered on 2/2/2020
-                                            td
-                                                .btn-group.btn-group-xs
-                                                    button(data-toggle="modal" data-target="#edit").btn.btn-default.px-0
-                                                        .fa.fa-eye.text-warning
-                                                .btn-group.btn-group-xs
-                                                    button(data-toggle="modal" data-target="#delete").btn.btn-default.px-0
-                                                        .fa.fa-trash.text-danger
+                        tbody
+                            mixin tr
+                                tr
+                                    td 1
+                                    td.visible-lg Java Develop Sun*
+                                        sup.badge.badge-primary.badge-pill 0
+                                    td Up to 7000$
+                                    td Developer
+                                    td
+                                        span.badge.badge-warning 0 / 2
+                                    td 0
+                                    td.text-primary Expered on 2/2/2020
+                                    td
+                                        .btn-group.btn-group-xs
+                                            button(data-toggle="modal" data-target="#edit").btn.btn-default.px-0
+                                                .fa.fa-eye.text-warning
+                                        .btn-group.btn-group-xs
+                                            button(data-toggle="modal" data-target="#delete").btn.btn-default.px-0
+                                                .fa.fa-trash.text-danger
 
-                                    +tr
-                                    +tr
-                                    +tr
-                                    +tr
-                                    +tr
-                                    +tr
-                                    +tr
-                                    +tr
-                                    +tr
-                            nav(aria-label='Page navigation example')
-                                ul.pagination
-                                    li.page-item
-                                        a.page-link(href='#') Previous
-                                    li.page-item
-                                        a.page-link(href='#') 1
-                                    li.page-itema
-                                        a.page-link(href='#') 2
-                                    li.page-item
-                                        a.page-link(href='#') 3
-                                    li.page-item
-                                        a.page-link(href='#') Next
+                            +tr
+                            +tr
+                            +tr
+                            +tr
+                            +tr
+                            +tr
+                            +tr
+                            +tr
+                            +tr
+                    nav(aria-label='Page navigation example')
+                        ul.pagination
+                            li.page-item
+                                a.page-link(href='#') Previous
+                            li.page-item
+                                a.page-link(href='#') 1
+                            li.page-itema
+                                a.page-link(href='#') 2
+                            li.page-item
+                                a.page-link(href='#') 3
+                            li.page-item
+                                a.page-link(href='#') Next
 
-        #delete.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
-            .modal-dialog(role='document')
-                .modal-content
-                    .modal-header
-                        h5#exampleModalLabel.modal-title Delete the candidate
-                        button.close(type='button', data-dismiss='modal', aria-label='Close')
-                            span(aria-hidden='true') ×
-                    .modal-body
-                        | Are you want to delete it
-                    .modal-footer
-                        button.btn.btn-secondary(type='button', data-dismiss='modal') Close
-                        button.btn.btn-danger(type='button') Delete
+#delete.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+    .modal-dialog(role='document')
+        .modal-content
+            .modal-header
+                h5#exampleModalLabel.modal-title Delete the candidate
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+            .modal-body
+                | Are you want to delete it
+            .modal-footer
+                button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+                button.btn.btn-danger(type='button') Delete
 
-        #edit.modal.fade(tabindex='-1', role='dialog', aria-labelledby='deleteLabel', aria-hidden='true')
-            .modal-dialog(role='document')
-                .modal-content
-                    .modal-header
-                        h5#deleteLabel.modal-title Edit the candidate
-                        button.close(type='button', data-dismiss='modal', aria-label='Close')
-                            span(aria-hidden='true') ×
-                    .modal-body
-                        form.form
-                            .form-group.row
-                                label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Name
-                                .col-sm-10
-                                    input#colFormLabelSm.form-control.form-control-sm(type='text', placeholder='enter name')
-                            .form-group.row
-                                label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Salary
-                                .col-sm-10
-                                    input#colFormLabelSm2.form-control.form-control-sm(type='text', placeholder='enter salary')
-                            .form-group.row
-                                label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Position
-                                .col-sm-10
-                                    input#colFormLabelSm3.form-control.form-control-sm(type='text', placeholder='entrer position')
+#edit.modal.fade(tabindex='-1', role='dialog', aria-labelledby='deleteLabel', aria-hidden='true')
+    .modal-dialog(role='document')
+        .modal-content
+            .modal-header
+                h5#deleteLabel.modal-title Edit the candidate
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+            .modal-body
+                form.form
+                    .form-group.row
+                        label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Name
+                        .col-sm-10
+                            input#colFormLabelSm.form-control.form-control-sm(type='text', placeholder='enter name')
+                    .form-group.row
+                        label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Salary
+                        .col-sm-10
+                            input#colFormLabelSm2.form-control.form-control-sm(type='text', placeholder='enter salary')
+                    .form-group.row
+                        label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Position
+                        .col-sm-10
+                            input#colFormLabelSm3.form-control.form-control-sm(type='text', placeholder='entrer position')
 
-                    .modal-footer
-                        button.btn.btn-secondary(type='button', data-dismiss='modal') Close
-                        button.btn.btn-success(type='button') Save
-        #create.modal.fade(tabindex='-1', role='dialog', aria-labelledby='deleteLabel', aria-hidden='true')
-            .modal-dialog(role='document')
-                .modal-content
-                    .modal-header
-                        h5#createLabel.modal-title Create a job
-                        button.close(type='button', data-dismiss='modal', aria-label='Close')
-                            span(aria-hidden='true') ×
-                    .modal-body
-                        form.form
-                            .form-group.row
-                                label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Name
-                                .col-sm-10
-                                    input.form-control.form-control-sm(type='text', placeholder='enter name')
-                            .form-group.row
-                                label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Salary
-                                .col-sm-10
-                                    input.form-control.form-control-sm(type='text', placeholder='enter salary')
-                            .form-group.row
-                                label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Position
-                                .col-sm-10
-                                    input.form-control.form-control-sm(type='text', placeholder='entrer position')
+            .modal-footer
+                button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+                button.btn.btn-success(type='button') Save
+#create.modal.fade(tabindex='-1', role='dialog', aria-labelledby='deleteLabel', aria-hidden='true')
+    .modal-dialog(role='document')
+        .modal-content
+            .modal-header
+                h5#createLabel.modal-title Create a job
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+            .modal-body
+                form.form
+                    .form-group.row
+                        label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Name
+                        .col-sm-10
+                            input.form-control.form-control-sm(type='text', placeholder='enter name')
+                    .form-group.row
+                        label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Salary
+                        .col-sm-10
+                            input.form-control.form-control-sm(type='text', placeholder='enter salary')
+                    .form-group.row
+                        label.col-sm-2.col-form-label.col-form-label-sm(for='colFormLabelSm') Position
+                        .col-sm-10
+                            input.form-control.form-control-sm(type='text', placeholder='entrer position')
 
-                    .modal-footer
-                        button.btn.btn-secondary(type='button', data-dismiss='modal') Close
-                        button.btn.btn-success(type='button') Save
+            .modal-footer
+                button.btn.btn-secondary(type='button', data-dismiss='modal') Close
+                button.btn.btn-success(type='button') Save
